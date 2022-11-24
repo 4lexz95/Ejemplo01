@@ -1,24 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ejemplo01" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Marca del reloj" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="djg-RX-z3V">
+                                <rect key="frame" x="33" y="124" width="348" height="38.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="348" id="FxK-gX-Wul"/>
+                                    <constraint firstAttribute="height" constant="38.5" id="v1I-mq-rW6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Precio de reloj" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ0-0p-4fw">
+                                <rect key="frame" x="33" y="238.5" width="348" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="hle-SM-qk1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Modeo de reloj" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5XR-9S-A14">
+                                <rect key="frame" x="33" y="180" width="348" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2KE-hE-MnE">
+                                <rect key="frame" x="20" y="349" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQ7-x7-qW1">
+                                <rect key="frame" x="87" y="345.5" width="80" height="34.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2w-J8-6g8">
+                                <rect key="frame" x="20" y="444" width="361" height="30"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LDm-VZ-Yj0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btnCrearReloj:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mhl-Gp-IA9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0v3-Gm-H1Q">
+                                <rect key="frame" x="20" y="531" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="djg-RX-z3V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0KF-K0-agg"/>
+                            <constraint firstItem="djg-RX-z3V" firstAttribute="trailing" secondItem="5XR-9S-A14" secondAttribute="trailing" id="1yK-na-cTh"/>
+                            <constraint firstItem="2KE-hE-MnE" firstAttribute="top" secondItem="ZQ0-0p-4fw" secondAttribute="bottom" constant="73.5" id="9eU-Mc-hYM"/>
+                            <constraint firstItem="djg-RX-z3V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="HMW-Ck-lMk"/>
+                            <constraint firstItem="5XR-9S-A14" firstAttribute="trailing" secondItem="ZQ0-0p-4fw" secondAttribute="trailing" id="LpX-cK-uWj"/>
+                            <constraint firstItem="5XR-9S-A14" firstAttribute="top" secondItem="djg-RX-z3V" secondAttribute="bottom" constant="17.5" id="SCQ-bG-Em3"/>
+                            <constraint firstItem="2KE-hE-MnE" firstAttribute="bottom" secondItem="NQ7-x7-qW1" secondAttribute="bottom" id="TTa-kB-6m8"/>
+                            <constraint firstItem="NQ7-x7-qW1" firstAttribute="top" secondItem="ZQ0-0p-4fw" secondAttribute="bottom" constant="70" id="XhF-zC-3wM"/>
+                            <constraint firstItem="2KE-hE-MnE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="f4F-Xe-QyL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="e2w-J8-6g8" secondAttribute="bottom" constant="388" id="jZr-KD-ql0"/>
+                            <constraint firstItem="ZQ0-0p-4fw" firstAttribute="top" secondItem="5XR-9S-A14" secondAttribute="bottom" constant="20" id="lAd-hR-O0W"/>
+                            <constraint firstItem="e2w-J8-6g8" firstAttribute="top" secondItem="2KE-hE-MnE" secondAttribute="bottom" constant="64" id="p2C-Hk-tjX"/>
+                            <constraint firstItem="2KE-hE-MnE" firstAttribute="leading" secondItem="e2w-J8-6g8" secondAttribute="leading" id="tbw-6h-Bga"/>
+                            <constraint firstItem="NQ7-x7-qW1" firstAttribute="leading" secondItem="2KE-hE-MnE" secondAttribute="trailing" constant="18" id="tjN-k3-YFs"/>
+                            <constraint firstItem="ZQ0-0p-4fw" firstAttribute="trailing" secondItem="e2w-J8-6g8" secondAttribute="trailing" id="wFJ-b2-Unm"/>
+                            <constraint firstItem="djg-RX-z3V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="wZR-ee-3Hb"/>
+                            <constraint firstItem="djg-RX-z3V" firstAttribute="leading" secondItem="5XR-9S-A14" secondAttribute="leading" id="x4k-Ta-bkr"/>
+                            <constraint firstItem="5XR-9S-A14" firstAttribute="leading" secondItem="ZQ0-0p-4fw" secondAttribute="leading" id="ynr-mT-r3Z"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblresumen" destination="0v3-Gm-H1Q" id="leX-Cp-jrt"/>
+                        <outlet property="swDigital" destination="2KE-hE-MnE" id="Ezf-Sa-uha"/>
+                        <outlet property="txtMarca" destination="djg-RX-z3V" id="lCh-xA-4F4"/>
+                        <outlet property="txtModelo" destination="5XR-9S-A14" id="esc-UE-leP"/>
+                        <outlet property="txtPrecio" destination="ZQ0-0p-4fw" id="osK-uL-yZS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="530" y="89"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

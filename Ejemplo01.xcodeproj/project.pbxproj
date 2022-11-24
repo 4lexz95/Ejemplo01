@@ -13,6 +13,7 @@
 		FA3A7D10292FBF7700246F33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3A7D0E292FBF7700246F33 /* Main.storyboard */; };
 		FA3A7D12292FBF7800246F33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3A7D11292FBF7800246F33 /* Assets.xcassets */; };
 		FA3A7D15292FBF7800246F33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3A7D13292FBF7800246F33 /* LaunchScreen.storyboard */; };
+		FA3A7D20292FC93100246F33 /* RelojStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A7D1F292FC93100246F33 /* RelojStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FA3A7D11292FBF7800246F33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA3A7D14292FBF7800246F33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA3A7D16292FBF7800246F33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA3A7D1F292FC93100246F33 /* RelojStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelojStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		FA3A7D07292FBF7700246F33 /* Ejemplo01 */ = {
 			isa = PBXGroup;
 			children = (
+				FA3A7D1E292FC8E600246F33 /* modelos */,
 				FA3A7D08292FBF7700246F33 /* AppDelegate.swift */,
 				FA3A7D0A292FBF7700246F33 /* SceneDelegate.swift */,
 				FA3A7D0C292FBF7700246F33 /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				FA3A7D16292FBF7800246F33 /* Info.plist */,
 			);
 			path = Ejemplo01;
+			sourceTree = "<group>";
+		};
+		FA3A7D1E292FC8E600246F33 /* modelos */ = {
+			isa = PBXGroup;
+			children = (
+				FA3A7D1F292FC93100246F33 /* RelojStruct.swift */,
+			);
+			name = modelos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA3A7D0D292FBF7700246F33 /* ViewController.swift in Sources */,
+				FA3A7D20292FC93100246F33 /* RelojStruct.swift in Sources */,
 				FA3A7D09292FBF7700246F33 /* AppDelegate.swift in Sources */,
 				FA3A7D0B292FBF7700246F33 /* SceneDelegate.swift in Sources */,
 			);
@@ -295,7 +307,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = alexf.Ejemplo01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -313,7 +325,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = alexf.Ejemplo01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
